@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Received stuff</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+    <script src="https://js.pusher.com/platform/latest/pusher-platform.js"></script>
+    <script>
+    var app = new PusherPlatform.App({
+        appId: '9fa04888-85b6-459d-b581-53048c584fe8',
+    });
+
+    var votefeed = app.feed('vote');
+    votefeed.subscribe({
+        onItem: item => {
+            $('body').append('<p><strong>Item</strong> '+JSON.stringify(item)+'</p>');
+        }
+    });
+    </script>
+</body>
+</html>
