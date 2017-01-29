@@ -1,3 +1,5 @@
+<!-- TEST RECEIVER
+     Created to test that controller works. -->
 <!doctype html>
 <html>
 <head>
@@ -9,7 +11,8 @@
     <script src="https://js.pusher.com/platform/latest/pusher-platform.js"></script>
     <script>
     var app = new PusherPlatform.App({
-        appId: '9fa04888-85b6-459d-b581-53048c584fe8',
+        // Removed for security
+        appId: '$APPID',
     });
 
     var votefeed = app.feed('vote');

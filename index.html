@@ -1,3 +1,6 @@
+<!-- CONTROLLER
+     The main game controller, served to phones.
+-->
 <!doctype html>
 <html>
 <head>
@@ -65,7 +68,8 @@
     <script src="https://js.pusher.com/platform/latest/pusher-platform.js"></script>
     <script>
     var app = new PusherPlatform.App({
-        appId: '9fa04888-85b6-459d-b581-53048c584fe8',
+        // this appId has been revoked for security reasons.
+        appId: '$APPID',
     });
 
     var votefeed = app.feed('vote');
